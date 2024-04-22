@@ -1,0 +1,50 @@
+.double-circle {
+    display: none;
+    width: 120px;
+    /* 大きさを調整 */
+    height: 120px;
+    /* 大きさを調整 */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.double-circle .outer-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 120px;
+    /* 大きさを調整 */
+    height: 120px;
+    /* 大きさを調整 */
+    background-color: red;
+}
+
+.double-circle .inner-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 60px;
+    /* 大きさを調整 */
+    height: 60px;
+    /* 大きさを調整 */
+    background-color: white;
+}
+
+h1 {
+    color: black;
+    font-size: 60px;
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    /* 左右のマージンを自動で設定して中央に配置 */
+    width: fit-content;
+    /* 要素の幅を内容に合わせる */
+}
