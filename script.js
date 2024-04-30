@@ -11,7 +11,7 @@ const questions = [
     },
     {
         str_num: "1",
-        cord: "A+"
+        cord: "E+"
     },
     {
         str_num: "1",
