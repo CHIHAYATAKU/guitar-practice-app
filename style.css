@@ -68,16 +68,26 @@ h1 {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     height: 100%;
 }
 
 .guitar {
-    width: 100%;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
 }
 
 .guitarTable {
-    width: 95%;
-    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90%;
 }
