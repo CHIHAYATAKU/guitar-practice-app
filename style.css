@@ -1,3 +1,21 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+html,
+body {
+    max-width: 100vw;
+    max-width: 100dvw;
+    background-color: white;
+    height: 100%;
+    overflow-x: hidden;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
 .double-circle {
     display: none;
     width: 120px;
@@ -47,4 +65,19 @@ h1 {
     /* 左右のマージンを自動で設定して中央に配置 */
     width: fit-content;
     /* 要素の幅を内容に合わせる */
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.guitar {
+    width: 100%;
+    height: 100%;
+}
+
+.guitarTable {
+    width: 95%;
+    height: 80%;
 }
