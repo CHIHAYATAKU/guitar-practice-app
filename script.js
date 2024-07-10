@@ -319,6 +319,8 @@ const questions = [
     },
 ];
 
+let selector;
+
 // 問題をランダムにする
 function shuffleQuiz(array) {
     let randomNum = Math.floor(Math.random() * array.length);
@@ -342,7 +344,6 @@ const createQuestion = () => {
     return selector;
 }
 
-let selector = createQuestion();
 //クリックイベント
 document.querySelectorAll('td').forEach(cell => {
     cell.addEventListener('click', () => {
@@ -359,4 +360,46 @@ document.querySelectorAll('td').forEach(cell => {
             selector = createQuestion();
         }
     });
+});
+
+/*
+//カウントダウンタイマーの処理
+*/
+
+// カウントダウンの秒数を設定
+// 初期設定
+const countdownSeconds = 10;  // カウントダウンの秒数
+let timeLeft = countdownSeconds;  // 残り時間をカウントする変数
+let timerInterval;  // setInterval のIDを保存する変数
+
+// タイマーの表示を取得
+const timerDisplay = document.getElementById('timer');
+const startButton = document.getElementById('startButton');
+
+// タイマーを更新する関数
+function updateTimer() {
+    timerDisplay.textContent = timeLeft;
+    timeLeft -= 1;
+
+    if (timeLeft < 0) {
+        clearInterval(timerInterval);
+        timerDisplay.textContent = 'Time\'s up!';
+    }
+}
+
+// タイマーを開始する関数
+function startTimer() {
+    timeLeft = countdownSeconds;  // 残り時間を10秒にリセット
+    timerDisplay.textContent = timeLeft;
+
+    if (timerInterval) {
+        clearInterval(timerInterval);
+    }
+
+    timerInterval = setInterval(updateTimer, 1000);
+}
+
+startButton.addEventListener('click', () => {
+    startTimer();
+    selector = createQuestion();
 });
